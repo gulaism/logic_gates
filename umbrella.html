@@ -67,35 +67,35 @@
         <!-- INPUT SECTION -->
         <section class="mb-10 p-6 bg-blue-50 rounded-xl shadow-inner">
             <h2 class="text-xl font-bold text-blue-700 mb-4 flex items-center">
-                Inputs ($I$): Environmental Sensors
+                Inputs: Environmental Sensors
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
                 <!-- Rain Input -->
                 <button id="input_rain" class="logic-button bg-white text-gray-700 p-4 rounded-xl flex flex-col items-center hover:bg-red-50" onclick="toggleInput('input_rain')">
                     <span class="text-3xl">🌧️</span>
-                    <span class="font-semibold mt-1">Rain ($I_R$)</span>
+                    <span class="font-semibold mt-1">Rain</span>
                     <span class="text-xs mt-1 text-gray-500">Value: <span id="val_rain">0</span></span>
                 </button>
 
                 <!-- Drizzle Input -->
                 <button id="input_drizzle" class="logic-button bg-white text-gray-700 p-4 rounded-xl flex flex-col items-center hover:bg-red-50" onclick="toggleInput('input_drizzle')">
                     <span class="text-3xl">🌦️</span>
-                    <span class="font-semibold mt-1">Drizzle ($I_D$)</span>
+                    <span class="font-semibold mt-1">Drizzle</span>
                     <span class="text-xs mt-1 text-gray-500">Value: <span id="val_drizzle">0</span></span>
                 </button>
 
                 <!-- Wind Input -->
                 <button id="input_wind" class="logic-button bg-white text-gray-700 p-4 rounded-xl flex flex-col items-center hover:bg-red-50" onclick="toggleInput('input_wind')">
                     <span class="text-3xl">💨</span>
-                    <span class="font-semibold mt-1">High Wind ($I_W$)</span>
+                    <span class="font-semibold mt-1">High Wind</span>
                     <span class="text-xs mt-1 text-gray-500">Value: <span id="val_wind">0</span></span>
                 </button>
 
                 <!-- Time Input (Toggle Switch for visual difference) -->
                 <div class="logic-button bg-white text-gray-700 p-4 rounded-xl flex flex-col items-center justify-center hover:bg-red-50">
                     <span class="text-3xl" id="time_icon">☀️</span>
-                    <span class="font-semibold mt-1">Night Time ($I_T$)</span>
+                    <span class="font-semibold mt-1">Night Time</span>
                     <div class="mt-2 flex items-center space-x-2">
                         <span class="text-xs">Day</span>
                         <div id="input_time" class="toggle-switch" onclick="toggleInput('input_time')"></div>
@@ -116,28 +116,28 @@
                 <!-- OR Gate -->
                 <div class="p-3 border rounded-xl bg-gray-50 text-center">
                     <div class="font-bold text-lg text-green-600">OR</div>
-                    <p class="text-sm text-gray-600 mb-1">Risk ($I_R + I_D$)</p>
+                    <p class="text-sm text-gray-600 mb-1">Risk</p>
                     <p class="text-2xl font-extrabold" id="O_Risk">0</p>
                 </div>
 
                 <!-- AND Gate -->
                 <div class="p-3 border rounded-xl bg-gray-50 text-center">
                     <div class="font-bold text-lg text-green-600">AND</div>
-                    <p class="text-sm text-gray-600 mb-1">Drizzle Hazard ($I_D \cdot I_W$)</p>
+                    <p class="text-sm text-gray-600 mb-1">Drizzle Hazard</p>
                     <p class="text-2xl font-extrabold" id="A_Hazard">0</p>
                 </div>
 
                 <!-- NOR Gate -->
                 <div class="p-3 border rounded-xl bg-gray-50 text-center">
                     <div class="font-bold text-lg text-green-600">NOR</div>
-                    <p class="text-sm text-gray-600 mb-1">No Rain ($\overline{I_R + I_D}$)</p>
+                    <p class="text-sm text-gray-600 mb-1">No Rain</p>
                     <p class="text-2xl font-extrabold" id="N_NoRain">1</p>
                 </div>
 
                 <!-- XNOR Gate -->
                 <div class="p-3 border rounded-xl bg-gray-50 text-center">
                     <div class="font-bold text-lg text-green-600">XNOR</div>
-                    <p class="text-sm text-gray-600 mb-1">Consistent ($\overline{I_T \oplus I_W}$)</p>
+                    <p class="text-sm text-gray-600 mb-1">Consistent</p>
                     <p class="text-2xl font-extrabold" id="X_Consistent">1</p>
                 </div>
             </div>
